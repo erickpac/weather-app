@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 import { useFetchWeather } from "@/hooks/weather/use-fetch-weather";
 import { WeatherCard } from "@/components/weather/card";
 
-export default function Index() {
+export default function Weather() {
   const { t } = useTranslation();
   const [city, setCity] = useState("");
   const [debouncedCity, setDebouncedCity] = useState("");
