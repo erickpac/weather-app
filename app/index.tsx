@@ -7,21 +7,29 @@ import {
   StyleSheet,
 } from "react-native";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useFetchWeather } from "@/hooks/weather/use-fetch-weather";
 import { WeatherCard } from "@/components/weather/card";
 
 export default function Index() {
   const { t } = useTranslation();
   const [city, setCity] = useState("");
+  const [debouncedCity, setDebouncedCity] = useState("");
   const [queriedCity, setQueriedCity] = useState("");
   const { data, isLoading, isError, error } = useFetchWeather(queriedCity);
 
-  const handleSearch = () => {
-    const trimmedCity = city.trim();
-    if (!trimmedCity) return;
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedCity(city.trim());
+    }, 800);
 
-    setQueriedCity(trimmedCity);
+    return () => clearTimeout(handler);
+  }, [city]);
+
+  const handleSearch = () => {
+    if (!debouncedCity) return;
+
+    setQueriedCity(debouncedCity);
   };
 
   return (
@@ -32,11 +40,13 @@ export default function Index() {
         placeholder={t("screens.index.enterCity")}
         style={styles.input}
       />
-      <Button title={t("screens.index.getWeather")} onPress={handleSearch} />
+      <Button
+        title={t("screens.index.getWeather")}
+        onPress={handleSearch}
+        disabled={isLoading || !debouncedCity}
+      />
 
-      {isLoading && (
-        <ActivityIndicator size="large" color="#0000ff" style={styles.loader} />
-      )}
+      {isLoading && <ActivityIndicator size="large" style={styles.loader} />}
 
       {isError && error && (
         <Text style={styles.errorText}>{error.message}</Text>
