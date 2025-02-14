@@ -9,7 +9,7 @@ export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
-        <Stack />
+        <Stack screenOptions={{ headerShown: false }} />
       </I18nextProvider>
     </QueryClientProvider>
   );
