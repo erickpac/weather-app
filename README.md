@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+# Weather App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This app provides weather information based on the city name entered by the user. If the user inputs a valid city, the app will display the weather information. If the city is invalid, the app will show an error message.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Get current weather information by entering a city name.
+- Error handling for invalid city names.
+
+## Installation
+
+1. **Clone the Repository:**
 
    ```bash
-   npm install
+   git clone <repository-url>
+   cd <repository-directory>
    ```
 
-2. Start the app
+2. **Install Dependencies:**
+
+   Make sure you have yarn installed. If not, you can install it by following the instructions on [Yarn's official page](https://yarnpkg.com/getting-started/install).
 
    ```bash
-    npx expo start
+      yarn install
    ```
 
-In the output, you'll find options to open the app in a
+## Running the App
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+To start the app, run the following command:
 
 ```bash
-npm run reset-project
+yarn start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This will launch the app, and you can enter city names to retrieve weather information.
 
-## Learn more
+## Running Tests
 
-To learn more about developing your project with Expo, look at the following resources:
+To run tests for the app, use:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+yarn test
+```
 
-## Join the community
+This will execute the test suite to ensure all functionalities are working as expected.
 
-Join our community of developers creating universal apps.
+## License
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License.
