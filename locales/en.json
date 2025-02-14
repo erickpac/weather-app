@@ -6,9 +6,18 @@
       "loading": "Loading...",
       "error": "Error fetching weather data!",
       "temp": "Temperature:",
+      "feelsLike": "Feels like:",
+      "min": "Min:",
+      "max": "Max:",
       "humidity": "Humidity:",
+      "pressure": "Pressure:",
+      "windSpeed": "Wind Speed:",
+      "cloudiness": "Cloudiness:",
+      "sunrise": "Sunrise:",
+      "sunset": "Sunset:",
       "weather": "Weather:",
-      "getWeather": "Get Weather"
+      "getWeather": "Get weather",
+      "enterCity": "Enter city name"
     }
   }
 }

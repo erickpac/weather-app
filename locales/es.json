@@ -4,11 +4,20 @@
       "title": "Clima",
       "search": "Buscar",
       "loading": "Cargando...",
-      "error": "Error obteniendo datos meteorológicos!",
+      "error": "¡Error al obtener datos del clima!",
       "temp": "Temperatura:",
+      "feelsLike": "Sensación térmica:",
+      "min": "Mínima:",
+      "max": "Máxima:",
       "humidity": "Humedad:",
+      "pressure": "Presión:",
+      "windSpeed": "Velocidad del viento:",
+      "cloudiness": "Nubosidad:",
+      "sunrise": "Amanecer:",
+      "sunset": "Atardecer:",
       "weather": "Clima:",
-      "getWeather": "Obtener clima"
+      "getWeather": "Obtener clima",
+      "enterCity": "Ingrese nombre de la ciudad"
     }
   }
 }
