@@ -18,7 +18,7 @@ This app provides weather information based on the city name entered by the user
 
 2. **Install Dependencies:**
 
-   Make sure you have yarn installed. If not, you can install it by following the instructions on [Yarn's official page](https://yarnpkg.com/getting-started/install).
+   Make sure you have yarn installed. If not, you can install it by following the instructions on [yarn's official page](https://yarnpkg.com/getting-started/install).
 
    ```bash
       yarn install
