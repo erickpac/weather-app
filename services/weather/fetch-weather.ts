@@ -1,3 +1,4 @@
+import { AxiosError } from "axios";
 import apiClient from "../api-client";
 import { WeatherResponse } from "@/types/weather";
 
@@ -16,8 +17,12 @@ export const fetchWeather = async (city: string): Promise<WeatherResponse> => {
 
     return data;
   } catch (error) {
-    throw new Error(
-      `Failed to fetch weather data: ${error instanceof Error ? error.message : error}`,
-    );
+    let message = error instanceof Error ? error.message : "Unknown error";
+
+    if (error instanceof AxiosError) {
+      message = error.response?.data.message;
+    }
+
+    throw new Error(`Failed to fetch weather data: ${message}`);
   }
 };

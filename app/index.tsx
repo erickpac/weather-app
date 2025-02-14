@@ -21,7 +21,7 @@ export default function Index() {
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedCity(city.trim());
-    }, 800);
+    }, 500);
 
     return () => clearTimeout(handler);
   }, [city]);
@@ -43,7 +43,7 @@ export default function Index() {
       <Button
         title={t("screens.index.getWeather")}
         onPress={handleSearch}
-        disabled={isLoading || !debouncedCity}
+        disabled={isLoading || (!debouncedCity && !isError)}
       />
 
       {isLoading && <ActivityIndicator size="large" style={styles.loader} />}
