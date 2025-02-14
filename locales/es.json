@@ -1,3 +1,14 @@
 {
-  "weatherScreen": "Clima"
+  "screens": {
+    "index": {
+      "title": "Clima",
+      "search": "Buscar",
+      "loading": "Cargando...",
+      "error": "Error obteniendo datos meteorológicos!",
+      "temp": "Temperatura:",
+      "humidity": "Humedad:",
+      "weather": "Clima:",
+      "getWeather": "Obtener clima"
+    }
+  }
 }

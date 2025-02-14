@@ -1,3 +1,14 @@
 {
-  "weatherScreen": "Weather"
+  "screens": {
+    "index": {
+      "title": "Weather",
+      "search": "Search",
+      "loading": "Loading...",
+      "error": "Error fetching weather data!",
+      "temp": "Temperature:",
+      "humidity": "Humidity:",
+      "weather": "Weather:",
+      "getWeather": "Get Weather"
+    }
+  }
 }

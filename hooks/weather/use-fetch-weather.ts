@@ -11,6 +11,7 @@ export const useFetchWeather = (city: string) => {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["weather", city],
     queryFn: () => fetchWeather(city),
+    enabled: !!city,
   });
 
   return { data, isLoading, isError, error };
