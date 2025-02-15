@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { useFetchWeather } from "@/hooks/weather/use-fetch-weather";
 import { WeatherCard } from "@/components/weather/card";
+import { WeatherButton } from "@/components/weather/button";
 
 export default function Weather() {
   const { t } = useTranslation();
@@ -40,10 +41,11 @@ export default function Weather() {
         placeholder={t("screens.index.enterCity")}
         style={styles.input}
       />
-      <Button
+
+      <WeatherButton
         title={t("screens.index.getWeather")}
-        onPress={handleSearch}
         disabled={isLoading || (!debouncedCity && !isError)}
+        onPress={handleSearch}
       />
 
       {isLoading && <ActivityIndicator size="large" style={styles.loader} />}
