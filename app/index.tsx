@@ -47,6 +47,8 @@ export default function Weather() {
           placeholderTextColor="#777"
           value={city}
           onChangeText={setCity}
+          onSubmitEditing={handleSearch}
+          returnKeyType="search"
         />
 
         <WeatherButton
