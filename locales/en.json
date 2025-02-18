@@ -1,7 +1,7 @@
 {
   "screens": {
     "weather": {
-      "title": "Weather",
+      "title": "Weather App",
       "search": "Search",
       "loading": "Loading...",
       "error": "Error fetching weather data!",
@@ -17,7 +17,7 @@
       "sunset": "Sunset:",
       "weather": "Weather:",
       "getWeather": "Get weather",
-      "enterCity": "Enter city name"
+      "enterCityName": "Enter city name"
     }
   }
 }

@@ -39,11 +39,11 @@ export default function Weather() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <Text style={styles.title}>Weather App</Text>
+        <Text style={styles.title}>{t("screens.weather.title")}</Text>
 
         <TextInput
           style={styles.input}
-          placeholder="Enter city name"
+          placeholder={t("screens.weather.enterCityName")}
           placeholderTextColor="#777"
           value={city}
           onChangeText={setCity}

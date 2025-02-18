@@ -1,7 +1,7 @@
 {
   "screens": {
     "weather": {
-      "title": "Clima",
+      "title": "Weather App",
       "search": "Buscar",
       "loading": "Cargando...",
       "error": "¡Error al obtener datos del clima!",
@@ -17,7 +17,7 @@
       "sunset": "Atardecer:",
       "weather": "Clima:",
       "getWeather": "Obtener clima",
-      "enterCity": "Ingrese nombre de la ciudad"
+      "enterCityName": "Ingrese nombre de la ciudad"
     }
   }
 }
