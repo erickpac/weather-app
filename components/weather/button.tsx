@@ -17,34 +17,27 @@ export const WeatherButton = ({ title, disabled, onPress }: ButtonProps) => {
         disabled && styles.buttonDisabled,
       ]}
     >
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.buttonText}>{title}</Text>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
-  text: {
-    color: "white",
-    fontSize: 18,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
   button: {
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-    borderRadius: 6,
-    backgroundColor: "black",
+    backgroundColor: "#007BFF",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 8,
   },
   buttonPressed: {
-    backgroundColor: "gray",
+    backgroundColor: "#0056b3",
   },
   buttonDisabled: {
-    backgroundColor: "gray",
+    backgroundColor: "#ccc",
   },
-  textColor: {
-    color: "white",
-    fontSize: 18,
+  buttonText: {
+    color: "#fff",
     fontWeight: "bold",
-    textAlign: "center",
+    fontSize: 16,
   },
 });

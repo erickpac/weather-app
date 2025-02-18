@@ -1,6 +1,6 @@
 {
   "screens": {
-    "index": {
+    "weather": {
       "title": "Weather",
       "search": "Search",
       "loading": "Loading...",
