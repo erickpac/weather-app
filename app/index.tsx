@@ -9,7 +9,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { useFetchWeather } from "@/hooks/weather/use-fetch-weather";
-import { WeatherButton } from "@/components/weather/button";
+import { GetWeatherButton } from "@/components/weather/button";
 
 export default function Weather() {
   const { t } = useTranslation();
@@ -51,7 +51,7 @@ export default function Weather() {
           returnKeyType="search"
         />
 
-        <WeatherButton
+        <GetWeatherButton
           title={t("screens.weather.getWeather")}
           disabled={!debouncedCity}
           onPress={handleSearch}
@@ -91,11 +91,11 @@ const styles = StyleSheet.create({
     backgroundColor: "linear-gradient(90deg, #0f9b0f 0%, #00b4db 100%)",
   },
   loader: {
-    marginTop: 10,
+    marginTop: 20,
   },
   errorMessage: {
     color: "red",
-    marginTop: 10,
+    marginTop: 20,
   },
   card: {
     width: "90%",

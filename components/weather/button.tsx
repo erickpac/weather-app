@@ -6,7 +6,7 @@ type ButtonProps = {
   onPress: () => void;
 };
 
-export const WeatherButton = ({ title, disabled, onPress }: ButtonProps) => {
+export const GetWeatherButton = ({ title, disabled, onPress }: ButtonProps) => {
   return (
     <Pressable
       disabled={disabled}
