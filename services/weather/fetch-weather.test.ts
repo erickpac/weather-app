@@ -7,7 +7,7 @@ import { AxiosHeaders } from "axios";
 jest.mock("../api-client");
 
 describe("fetchWeather", () => {
-  it("should return weather data when API call is successful", async () => {
+  test("should return weather data when API call is successful", async () => {
     const mockData: WeatherResponse = {
       coord: { lon: 0, lat: 0 },
       weather: [
@@ -48,7 +48,7 @@ describe("fetchWeather", () => {
     });
   });
 
-  it("should throw an error with message when API call fails with AxiosError", async () => {
+  test("should throw an error with message when API call fails with AxiosError", async () => {
     const mockError = new AxiosError(
       "Request failed",
       undefined,
@@ -69,7 +69,7 @@ describe("fetchWeather", () => {
     );
   });
 
-  it("should throw an error with message when API call fails with generic error", async () => {
+  test("should throw an error with message when API call fails with generic error", async () => {
     const mockError = new Error("Network Error");
     (apiClient.get as jest.Mock).mockRejectedValue(mockError);
 
@@ -78,7 +78,7 @@ describe("fetchWeather", () => {
     );
   });
 
-  it("should throw an error with unknown message when API call fails with unknown error", async () => {
+  test("should throw an error with unknown message when API call fails with unknown error", async () => {
     (apiClient.get as jest.Mock).mockRejectedValue("Unknown error");
 
     await expect(fetchWeather("London")).rejects.toThrow(

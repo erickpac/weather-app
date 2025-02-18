@@ -11,7 +11,7 @@ jest.mock("@tanstack/react-query", () => ({
 jest.mock("@/services/weather/fetch-weather");
 
 describe("useFetchWeather", () => {
-  it("should return weather data when city is provided", async () => {
+  test("should return weather data when city is provided", async () => {
     const mockData = { temp: 25 };
     (useQuery as jest.Mock).mockReturnValue({
       data: mockData,
@@ -28,7 +28,7 @@ describe("useFetchWeather", () => {
     expect(result.current.error).toBe(null);
   });
 
-  it("should return error when there is an error fetching data", async () => {
+  test("should return error when there is an error fetching data", async () => {
     const mockError = new Error("Failed to fetch");
     (useQuery as jest.Mock).mockReturnValue({
       data: null,
@@ -45,7 +45,7 @@ describe("useFetchWeather", () => {
     expect(result.current.error).toEqual(mockError);
   });
 
-  it("should not fetch data when city is not provided", async () => {
+  test("should not fetch data when city is not provided", async () => {
     (useQuery as jest.Mock).mockReturnValue({
       data: null,
       isLoading: false,

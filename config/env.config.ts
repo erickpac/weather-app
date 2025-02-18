@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const envSchema = z.object({
+export const envSchema = z.object({
   EXPO_PUBLIC_API_URL: z.string().nonempty("API URL must be not empty"),
   EXPO_PUBLIC_API_KEY: z.string().nonempty("API KEY must be not empty"),
 });
