@@ -1,12 +1,16 @@
 import { StyleSheet, Text, Pressable } from "react-native";
 
-type ButtonProps = {
+type GetWeatherButtonProps = {
   title: string;
   disabled?: boolean;
   onPress: () => void;
 };
 
-export const GetWeatherButton = ({ title, disabled, onPress }: ButtonProps) => {
+export const GetWeatherButton = ({
+  title,
+  disabled,
+  onPress,
+}: GetWeatherButtonProps) => {
   return (
     <Pressable
       disabled={disabled}
